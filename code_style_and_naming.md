@@ -2,18 +2,20 @@
 
 ## General guideline
 ### Whitespace
-#### 1. No whitespace:
+    1. No whitespace:
     inside parentheses, brackets, braces    (), [], {}
     before a comma, semicolon, colon    , ; :
     before a open parenthese, bracket, brace which is a start of a function call
-#### 2. One whitespace around:
+
+    2. One whitespace around:
     an assignment operater
     reserved word starting a conditional statement with parentheses
     braces if follows codes in the same line
 
 ### Vertical whitespace
-#### 1. A single blank line appears when separating the logic of codes
-#### 2. Multiple blank lines are permitted, but never required (nor encouraged). If you do use multiple consecutive blank lines, do so consistently throughout your code base
+    1. A single blank line appears when separating the logic of codes
+
+    2. Multiple blank lines are permitted, but never required (nor encouraged). If you do use multiple consecutive blank lines, do so consistently throughout your code base
 
 ### Parentheses
     Parentheses are not used around the top-most expression that follows an conditional statement
