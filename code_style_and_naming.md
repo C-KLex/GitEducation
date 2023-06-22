@@ -97,11 +97,9 @@
 
     Do NOT include trailing commas in single-line constructs, as they add unnecessary visual clutter.
 
-### Others
 
 
 # Naming convention
-    It is important that naming should only include alphabetic & numerical characters!! In addition, naming should be as short and meaningful as possible. Make sure to keep it short and in an easily understandable format. The following are the naming conventions.
 
     Files: PascalCase
     Files that belongs to other files: ParentFile_ChildrenFile
