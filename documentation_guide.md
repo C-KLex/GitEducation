@@ -125,8 +125,8 @@ def my_function(arg1, arg2):
     1. Provide an overview of the script's purpose and functionality. 
     2. Explain what the script does, its main objectives, and how it can be utilized.
     
-  - *template*:
-
+  - *template:*
+  - 
         The script `data_processing.py` is responsible for processing and analyzing data from a given input file.
 
         This script reads the data from the input file, performs various data processing operations such as cleaning, transformation, and aggregation. It then generates reports, visualizations, or saves the processed data to an output file.
