@@ -65,12 +65,28 @@
     def function1():
         print("yoo")
         print("same funtion")
-
+    # 1st blank line
     def function2():
         print("this is another function")
     ```
 
-2. Multiple blank lines are permitted, but never required (nor encouraged). If you do use multiple consecutive blank lines, do so consistently throughout your code base
+2. Multiple blank lines are permitted, but never required (nor encouraged). e.g. blanks between class
+```python
+class Class1:
+    def __init__(self):
+        print("this is initial function")
+    
+    def function1():
+        print("this is function1 from class1")
+# 1st blank line
+# 2nd blank line
+class Class2:
+    def __init__(self):
+        print("this is initial function")
+    
+    def function2():
+        print("this is function2 from class2")
+```
 
 ### Parentheses
 
