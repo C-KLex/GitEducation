@@ -65,15 +65,6 @@ if x = 1:
 if (x = 1):
 ```
 
-### Braces
-1. Outside braces:
-- There is no line break before the opening brace '{'.
-- There is a line break after the opening brace '{', except: one statement per line; empty blocks written as {}
-    
-2. Inside braces:
-- There is a line break before the closing brace '}', except: one statement per line; empty blocks written as {}
-- There is a line break after the closing brace '}' when terminating a statement or the body of a declaration
-
 ## Specific guideline
 
 ### Properties
