@@ -2,36 +2,36 @@
 
 ## General guideline
 ### Whitespace
-    1. No whitespace:
-    inside parentheses, brackets, braces    (), [], {}
-    before a comma, semicolon, colon    , ; :
-    before a open parenthese, bracket, brace which is a start of a function call
+1. No whitespace:
+inside parentheses, brackets, braces    (), [], {}
+before a comma, semicolon, colon    , ; :
+before a open parenthese, bracket, brace which is a start of a function call
 
-    2. One whitespace around:
-    an assignment operater
-    reserved word starting a conditional statement with parentheses
-    braces if follows codes in the same line
+2. One whitespace around:
+an assignment operater
+reserved word starting a conditional statement with parentheses
+braces if follows codes in the same line
 
 ### Vertical whitespace
-    1. A single blank line appears when separating the logic of codes
+1. A single blank line appears when separating the logic of codes
 
-    2. Multiple blank lines are permitted, but never required (nor encouraged). If you do use multiple consecutive blank lines, do so consistently throughout your code base
+2. Multiple blank lines are permitted, but never required (nor encouraged). If you do use multiple consecutive blank lines, do so consistently throughout your code base
 
 ### Parentheses
-    Parentheses are not used around the top-most expression that follows an conditional statement
+Parentheses are not used around the top-most expression that follows an conditional statement
 
 ### Braces
-    Outside braces:
-        There is no line break before the opening brace '{'.
-        There is a line break after the opening brace '{', except:
-            one statement per line.
-            empty blocks written as {}
+Outside braces:
+There is no line break before the opening brace '{'.
+There is a line break after the opening brace '{', except:
+one statement per line.
+empty blocks written as {}
     
-    Inside braces:
-        There is a line break before the closing brace '}', except:
-            one statement per line.
-            empty blocks written as {}
-        There is a line break after the closing brace '}' when terminating a statement or the body of a declaration
+Inside braces:
+There is a line break before the closing brace '}', except:
+one statement per line.
+empty blocks written as {}
+There is a line break after the closing brace '}' when terminating a statement or the body of a declaration
 
 ## Specific guideline
 
