@@ -134,11 +134,10 @@ if (x = 1):
 
 
 # Naming convention
-
-    Files: PascalCase
-    Files that belongs to other files: ParentFile_ChildrenFile
-    Class: PascalCase
-    Function: camelCase
-    Variables: camelCase
-    Dates: YYYYMMDD
-    Versions: xxx001, xxx002
+- Package: Snake_Case (Uppercase Initial)
+- Files: Snake_Case (Uppercase Initial)
+- Class: Snake_Case (Uppercase Initial)
+- Function: snake_case
+- Variables: snake_case
+- Dates: YYYYMMDD
+- Versions: xxx001, xxx002
