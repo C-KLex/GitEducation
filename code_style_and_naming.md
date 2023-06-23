@@ -1,6 +1,6 @@
-# Coding style guideline
+# Coding Style Guideline
 
-## General guideline
+## General Guideline
 
 ### Whitespace
 
@@ -10,27 +10,27 @@
 
         ```python
         # right
-        function1(var1, var2)
+        def function1(var1, var2)
         # wrong
-        function1( var1, var2 )
+        def function1( var1, var2 )
         ```
 
     - before a comma, semicolon, colon  , ; :
 
         ```python
         # right
-        function1(var1, var2)
+        def function1(var1, var2)
         # wrong
-        function1(var1,var2)
+        def function1(var1,var2)
         ```
 
     - before a open parenthese, bracket, brace which is a start of a function call
 
         ```python
         # right
-        function1(var1, var2)
+        def function1(var1, var2)
         # wrong
-        function1 (var1, var2)
+        def function1 (var1, var2)
         ```
 
 2. One whitespace around:
@@ -57,7 +57,7 @@
 
     - braces if follows codes in the same line
 
-### Vertical whitespace
+### Vertical Whitespace
 
 1. A single blank line appears when separating the logic of codes
 
@@ -83,110 +83,110 @@
     if (x = 1):
     ```
 
-## Specific guideline
+## Specific Guideline
 
 ### Properties
+
 1. Use meaningful names for your properties that accurately describe their purpose. Follow the naming convention recommended by PEP8, which suggest using lowercase letters and underscores for property names (my_property instead of myProperty)
-```python
-class MyClass:
-    def __init__(self):
-        self._my_property = None
 
-    @property
-    def my_property(self):
-        return self._my_property
-```
+    ```python
+    class MyClass:
+        def __init__(self):
+            self._my_property = None
+
+        @property
+        def my_property(self):
+            return self._my_property
+    ```
+
 2. In Python, properties are often implemented using the @property decorator. Place this decorator above the getter method to indicate that the method is accessed as a property rather than a regular method.
-```python
-class MyClass:
-    def __init__(self):
-        self._my_property = None
 
-    @property
-    def my_property(self):
-        return self._my_property
-```
+    ```python
+    class MyClass:
+        def __init__(self):
+            self._my_property = None
+
+        @property
+        def my_property(self):
+            return self._my_property
+    ```
+
 3. Keep the naming consistent for the underlying private attribute associated with the property. Prefix it with an underscore (_) to indicate that it's intended to be private. This convention helps differentiate the property from the attribute itself.
-```python
-class MyClass:
-    def __init__(self):
-        self._my_property = None
 
-    @property
-    def my_property(self):
-        return self._my_property
-```
-4. If you want to allow setting the value of the property, define a setter method using the @property_name.setter decorator. 
-```python
-class MyClass:
-    def __init__(self):
-        self._my_property = None
+    ```python
+    class MyClass:
+        def __init__(self):
+            self._my_property = None
 
-    @property
-    def my_property(self):
-        return self._my_property
+        @property
+        def my_property(self):
+            return self._my_property
+    ```
 
-    @my_property.setter
-    def my_property(self, value):
-        # Property setter logic
-        self._my_property = value
-```
-5. If a property should be read-only, define only the getter method and omit the setter method. 
-```python
-class MyClass:
-    def __init__(self):
-        self._my_property = None
+4. If you want to allow setting the value of the property, define a setter method using the @property_name.setter decorator.
 
-    @property
-    def my_property(self):
-        return self._my_property
-```
-### Switch statements
-1. Indent the body of the switch statement to improve readability. Use either a tab or four spaces or a tab for indentation. 
-    
-2. Start each case label on a new line and indent it one level deeper than the switch statement. Additionally, align the case labels vertically for better readability.
-```python
-switch variable:
-    case value1:
-        # code for value1
-        break
-    case value2:
-        # code for value2
-        break
-    case value3:
-        # code for value3
-        break
-    default:
-        # code for all other cases
-```
-3. Use braces {} for all cases, even if they're not strictly necessary.
-```python
-switch variable:
-    case value1:
-        {
-            # code for value1
-            break
-        }
-    case value2:
-        {
-            # code for value2
-            break
-        }
-    case value3:
-        {
-            # code for value3
-            break
-        }
-    default:
-        {
-            # code for all other cases
-        }
-```
-4. Always include a default case to handle unexpected values. This case should clearly communicate how unexpected values are handled.
+    ```python
+    class MyClass:
+        def __init__(self):
+            self._my_property = None
 
-5. Include a break statement at the end of each case to prevent fall-through to the next case. If fall-through is intentional, document it with a comment.     
+        @property
+        def my_property(self):
+            return self._my_property
 
-# Naming convention
+        @my_property.setter
+        def my_property(self, value):
+            # Property setter logic
+            self._my_property = value
+    ```
+
+5. If a property should be read-only, define only the getter method and omit the setter method.
+
+    ```python
+    class MyClass:
+        def __init__(self):
+            self._my_property = None
+
+        @property
+        def my_property(self):
+            return self._my_property
+    ```
+
+### Switch Statements
+
+1. Indent the body of the switch statement to improve readability. Use either a tab or four spaces or a tab for indentation.
+
+2. Start each case label on a new line and indent it one level deeper than the switch statement. Align the case labels vertically for better readability. Additionally, use braces {} for all cases, even if they're not strictly necessary.
+
+    ```python
+    switch variable:
+        case value1:
+            {
+                # code for value1
+                break
+            }
+        case value2:
+            {
+                # code for value2
+                break
+            }
+        case value3:
+            {
+                # code for value3
+                break
+            }
+        default:
+            {
+                # code for all other cases
+            }
+    ```
+
+4.Always include a default case to handle unexpected values. This case should clearly communicate how unexpected values are handled.
+
+5.Include a break statement at the end of each case to prevent fall-through to the next case. If fall-through is intentional, document it with a comment.
+
+# Naming Convention
+
 - Package: Snake_Case (Uppercase Initial)
 - Files: Snake_Case (Uppercase Initial)
 - Class: Snake_Case (Uppercase Initial)
