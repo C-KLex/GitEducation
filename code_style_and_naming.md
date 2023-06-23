@@ -65,12 +65,29 @@
     def function1():
         print("yoo")
         print("same funtion")
-
+    # 1st blank line
     def function2():
         print("this is another function")
     ```
 
-2. Multiple blank lines are permitted, but never required (nor encouraged). If you do use multiple consecutive blank lines, do so consistently throughout your code base
+2.Multiple blank lines are permitted, but never required (nor encouraged). e.g. blanks between class
+
+```python
+class Class1:
+    def __init__(self):
+        print("this is initial function")
+    
+    def function1():
+        print("this is function1 from class1")
+# 1st blank line
+# 2nd blank line
+class Class2:
+    def __init__(self):
+        print("this is initial function")
+    
+    def function2():
+        print("this is function2 from class2")
+```
 
 ### Parentheses
 
@@ -111,36 +128,36 @@
             return self._my_property
     ```
 
-3. Keep the naming consistent for the underlying private attribute associated with the property. Prefix it with an underscore (_) to indicate that it's intended to be private. This convention helps differentiate the property from the attribute itself.
+3.Keep the naming consistent for the underlying private attribute associated with the property. Prefix it with an underscore (_) to indicate that it's intended to be private. This convention helps differentiate the property from the attribute itself.
 
     ```python
     class MyClass:
         def __init__(self):
             self._my_property = None
-
+            
         @property
         def my_property(self):
             return self._my_property
     ```
 
-4. If you want to allow setting the value of the property, define a setter method using the @property_name.setter decorator.
+4.If you want to allow setting the value of the property, define a setter method using the @property_name.setter decorator.
 
-    ```python
-    class MyClass:
-        def __init__(self):
-            self._my_property = None
+```python
+class MyClass:
+    def __init__(self):
+        self._my_property = None
 
         @property
         def my_property(self):
             return self._my_property
 
-        @my_property.setter
-        def my_property(self, value):
-            # Property setter logic
-            self._my_property = value
-    ```
+    @my_property.setter
+    def my_property(self, value):
+        # Property setter logic
+        self._my_property = value
+```
 
-5. If a property should be read-only, define only the getter method and omit the setter method.
+5.If a property should be read-only, define only the getter method and omit the setter method.
 
     ```python
     class MyClass:
@@ -183,9 +200,9 @@
 
 4.Always include a default case to handle unexpected values. This case should clearly communicate how unexpected values are handled.
 
-5.Include a break statement at the end of each case to prevent fall-through to the next case. If fall-through is intentional, document it with a comment.
+5.Include a break statement at the end of each case to prevent fall-through to the next case. If fall-through is intentional, document it with a comment.     
 
-# Naming Convention
+# Naming convention
 
 - Package: Snake_Case (Uppercase Initial)
 - Files: Snake_Case (Uppercase Initial)
