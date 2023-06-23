@@ -23,7 +23,7 @@ Commit Message Style: all **lowercase** letters
 ----
 ## 2️⃣ **Code comment(.py)**
 
-### *Template for python*: 
+### *Template for the python script*: 
 ```python
 """
 Module/Package/Script Name
@@ -32,11 +32,9 @@ Module/Package/Script Name
 Module/Package/Script description goes here.
 
 Author: [Your Name]
-Date: [Date]
-
+Date: [Script Create Date]
 """
 
-# Class definitions
 class MyClass:
     """
     Class description goes here.
@@ -82,8 +80,6 @@ class MyClass:
         """
         pass
 
-
-# Function definitions and descriptions
 def my_function(arg1, arg2):
     """
     Function description goes here.
@@ -100,9 +96,8 @@ def my_function(arg1, arg2):
 
 ```
 
-
 ----
-## 3️⃣ **Xcode Document(.md)**
+## 3️⃣ **Document(.md)**
 
 - ### **Function description**
   1. Briefly describe what the function does.
@@ -119,20 +114,8 @@ def my_function(arg1, arg2):
 
     - **Returns:** 
       - `float`: The average value of the numbers.
-
-    ----
-- ### **Script description**
-    1. Provide an overview of the script's purpose and functionality. 
-    2. Explain what the script does, its main objectives, and how it can be utilized.
+ 
     
-  - *template:*
-  - 
-        The script `data_processing.py` is responsible for processing and analyzing data from a given input file.
-
-        This script reads the data from the input file, performs various data processing operations such as cleaning, transformation, and aggregation. It then generates reports, visualizations, or saves the processed data to an output file.
-
-        To run the script, you need to provide the input file path and specify the desired data processing operations as command-line arguments.
-  
     ----
 
 - ### **Module description**
@@ -152,8 +135,7 @@ def my_function(arg1, arg2):
         - `FileHandler`: A class for handling file operations such as reading, writing, and file manipulation.
   
 
-
-    ----
+        ----
 - ### **Package description**
     1. Describe the purpose and scope of the package. 
     2. Explain what the package offers, its main features, and how it can be beneficial to users. 
@@ -168,5 +150,4 @@ def my_function(arg1, arg2):
       - `analysis`: Implements various statistical and analytical methods for data analysis and visualization.
       - `modeling`: Includes classes and functions for building and evaluating predictive models.
   
-----   
-
+----  
