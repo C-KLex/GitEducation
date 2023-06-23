@@ -1,69 +1,87 @@
 # Coding style guideline
 
 ## General guideline
+
 ### Whitespace
+
 1. No whitespace:
-- inside parentheses, brackets, braces  (), [], {}
-```python
-# right
-function1(var1, var2)
-# wrong
-function1( var1, var2 )
-```
-- before a comma, semicolon, colon  , ; :
-```python
-# right
-function1(var1, var2)
-# wrong
-function1(var1,var2)
-```
-- before a open parenthese, bracket, brace which is a start of a function call
-```python
-# right
-function1(var1, var2)
-# wrong
-function1 (var1, var2)
-```
+
+    - inside parentheses, brackets, braces  (), [], {}
+
+        ```python
+        # right
+        function1(var1, var2)
+        # wrong
+        function1( var1, var2 )
+        ```
+
+    - before a comma, semicolon, colon  , ; :
+
+        ```python
+        # right
+        function1(var1, var2)
+        # wrong
+        function1(var1,var2)
+        ```
+
+    - before a open parenthese, bracket, brace which is a start of a function call
+
+        ```python
+        # right
+        function1(var1, var2)
+        # wrong
+        function1 (var1, var2)
+        ```
 
 2. One whitespace around:
-- an assignment operater
-```python
-# right
-var1 = 0
-# wrong
-var1=0
-var1 =0
-var1= 0
-```
-- reserved word starting a conditional statement with parentheses
-```python
-# right
-if (x>1 & x<2):
-# wrong
-if(x>1 & x<2):
-```
-- braces if follows codes in the same line
+
+    - an assignment operater
+
+        ```python
+        # right
+        var1 = 0
+        # wrong
+        var1=0
+        var1 =0
+        var1= 0
+        ```
+
+    - reserved word starting a conditional statement with parentheses
+
+        ```python
+        # right
+        if (x>1 & x<2):
+        # wrong
+        if(x>1 & x<2):
+        ```
+
+    - braces if follows codes in the same line
 
 ### Vertical whitespace
-1. A single blank line appears when separating the logic of codes
-```python
-def function1():
-    print("yoo")
-    print("same funtion")
 
-def function2():
-    print("this is another function")
-```
+1. A single blank line appears when separating the logic of codes
+
+    ```python
+    def function1():
+        print("yoo")
+        print("same funtion")
+
+    def function2():
+        print("this is another function")
+    ```
+
 2. Multiple blank lines are permitted, but never required (nor encouraged). If you do use multiple consecutive blank lines, do so consistently throughout your code base
 
 ### Parentheses
+
 1. Parentheses are not used around the top-most expression that follows an conditional statement
-```python
-# right
-if x = 1:
-# wrong
-if (x = 1):
-```
+
+    ```python
+    # right
+    if x = 1:
+    # wrong
+    if (x = 1):
+    ```
 
 ## Specific guideline
 
