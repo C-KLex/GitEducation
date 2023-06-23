@@ -1,6 +1,7 @@
 # **Documentation Guideline**
 
 ## 1️⃣ **Write commit**
+
 ```bash
 git commit -m "label: this is a commit summary" -m "this is a commit description (optional)" 
 ```
@@ -8,22 +9,25 @@ git commit -m "label: this is a commit summary" -m "this is a commit description
 Commit Message Style: all **lowercase** letters
 
 *Label Reference*:
- - feat – a new feature is introduced with the changes
- - fix – a bug fix has occurred
- - chore – changes that do not relate to a fix or feature and don't modify src or test files (for example updating dependencies)
-   - eg: chore: update xxx to latest version
- - refactor – refactored code that neither fixes a bug nor adds a feature
- - docs – updates to documentation such as a the README or other markdown files
- - style – changes that do not affect the meaning of the code, likely related to code formatting such as white-space, missing semi-colons, and so on.
- - test – including new or correcting previous tests
- - perf – performance improvements
- - build – changes that affect the build system or external dependencies
- - revert – reverts a previous commit
+
+- feat – a new feature is introduced with the changes
+- fix – a bug fix has occurred
+- chore – changes that do not relate to a fix or feature and don't modify src or test files (for example updating dependencies)
+- eg: chore: update xxx to latest version
+- refactor – refactored code that neither fixes a bug nor adds a feature
+- docs – updates to documentation such as a the README or other markdown files
+- style – changes that do not affect the meaning of the code, likely related to code formatting such as white-space, missing semi-colons, and so on.
+- test – including new or correcting previous tests
+- perf – performance improvements
+- build – changes that affect the build system or external dependencies
+- revert – reverts a previous commit
 
 ----
+
 ## 2️⃣ **Code comment(.py)**
 
-### *Template for the python script*: 
+### *Template for the python script*
+
 ```python
 """
 Module/Package/Script Name
