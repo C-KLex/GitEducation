@@ -12,7 +12,7 @@
 ## 📗 1. How this CLI works
 
 ---
-There will be three main modules for the CLI to work, whose names are *Login,* *Register*, and *Log*.  
+There will be *four* main modules for the CLI to work, whose names are *Login,* *Register*, *Log*, and *Main*.  
 
 ### 1.1 Login:
 
@@ -40,7 +40,15 @@ There will be three main modules for the CLI to work, whose names are *Login,* *
 
 >- If this function is called with an ***"multiple_registration"*** input, record the user login datetime, the username, and the activity as ***"multiple_registration"***
 
->- If this function is called with an ***"successful_registration"*** input, record the user login datetime, the username, and the activity as ***"successful_registration"***
+>- If this function is called with an ***"successful_registration"*** input, record the user login datetime, the username, and the activity as ***"successful_registration"***  
+
+### 1.4 Main:  
+
+>- Take the action user wants to do as the first input, and then ask for the username and password.
+
+>- If the user wants to login, call the ***Login*** function.
+
+>- If the user wants to register, call the ***Register*** function.
 
 ## 🖼️ 2. UI UX
 
@@ -50,7 +58,7 @@ There will be three main modules for the CLI to work, whose names are *Login,* *
 ![UI UX Picture](UI_UX_picture.jpg)
 
 
-## 🖼️ 3. How does each module look like
+## 🔍 3. How does each module look like
 
 ---
     
@@ -105,7 +113,7 @@ register(username, password):
     return = str # return if the register is successful.
 ```
 
-### 3.3 log module:
+### 3.3 Log module:
 
 ```python
 log(username, password, status):
@@ -113,4 +121,20 @@ log(username, password, status):
     '''
     username = str, password = str, status = str
     return = str # return the result for user.
+```
+
+### 3.4 Main module:
+
+```python
+main():
+    '''purpose of this function: connect the other three modules and make this project work.
+    '''
+    input("Which action you wanna take?(Login or Register)")
+
+    if Login:
+        login()
+    elif Register:
+        register()
+    else:
+        return "Please enter again."
 ```
