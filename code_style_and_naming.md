@@ -100,6 +100,23 @@
     if (x = 1):
     ```
 
+### Functional example code
+```python
+import package1
+import package2
+
+class Class1:
+    def __init__(self):
+        print("a")
+    
+    def function1(b: int) -> str():
+        return "b"
+
+if __name__ == "__main__":
+    example1 = Class1()
+    example1.function1(3)
+```
+
 ## Specific Guideline
 
 ### Properties
