@@ -14,7 +14,7 @@
 ---
 There will be *four* main modules for the CLI to work, whose names are *Login,* *Register*, *Log*, and *Main*.  
 
-### 1.1 Login:
+### 1.1 Login
 
 >- First there will be a login interface with two bars, the upper one is for users to input *username*; the lower one is for users to input *password*. Below these two bars, there should be one button for user to click in and register. At the lower right corner of the page is a ***"Finished"*** button indicating the user has finished inputting the information.
 
@@ -24,15 +24,15 @@ There will be *four* main modules for the CLI to work, whose names are *Login,* 
 
 >- If the user neither enter the right username nor the right password, jump to a page showing ***"Unsuccessful login, try again. If not registered yet, click here."***. If the user clicked ***"try again."***, jump back to the login page; if the user clicked ***"click here."***, jump to the register page.  
 
-### 1.2 Register:
+### 1.2 Register
 
->- The register page will first show ***"Please enter below messages to register."***, the rest part is the same as the two bars and the finish button at the first page.   
+>- The register page will first show ***"Please enter below messages to register."***, the rest part is the same as the two bars and the finish button at the first page.
 
->- If the account is already registered, jump to a page showing ***"Account already exists. Try again."***, and then open the log module with an ***"multiple_registration"*** input to record the user activities. If the user clicks ***"Try again."***, jump to the register page.   
+>- If the account is already registered, jump to a page showing ***"Account already exists. Try again."***, and then open the log module with an ***"multiple_registration"*** input to record the user activities. If the user clicks ***"Try again."***, jump to the register page.
 
->- If the account is not yet registered, jump to a page showing ***"Successfully registered! Login."***, and then open the log module with an ***"successful_registration"*** input to record the user activities. If the user clicks ***"Login."***, jump to the first login page. 
+>- If the account is not yet registered, jump to a page showing ***"Successfully registered! Login."***, and then open the log module with an ***"successful_registration"*** input to record the user activities. If the user clicks ***"Login."***, jump to the first login page.
 
-### 1.3 Log:
+### 1.3 Log
 
 >- If this function is called with an ***"successful_login"*** input, record the user login datetime, the username, and the activity as ***"successful_login"***
 
@@ -53,20 +53,20 @@ There will be *four* main modules for the CLI to work, whose names are *Login,* 
 ## 🖼️ 2. UI UX
 
 ---
+
 ### The UI UX looks like
 
 ![UI UX Picture](UI_UX_picture.jpg)
 
-
 ## 🔍 3. How does each module look like
 
 ---
-    
+
 >We are going to build three different modules under the same directory, and then import them all into the main function to make the code looks tidier.
 
->**_We will each commit and push the finished part on github and will merge them back to main branch to finish this product._**
+>**We will each commit and push the finished part on github and will merge them back to main branch to finish this product._**
 
-### 3.1 Login module:   
+### 3.1 Login module
 
 ```python
 # File1
@@ -113,7 +113,7 @@ register(username, password):
     return = str # return if the register is successful.
 ```
 
-### 3.3 Log module:
+### 3.3 Log module
 
 ```python
 log(username, password, status):
@@ -123,7 +123,7 @@ log(username, password, status):
     return = str # return the result for user.
 ```
 
-### 3.4 Main module:
+### 3.4 Main module
 
 ```python
 main():
