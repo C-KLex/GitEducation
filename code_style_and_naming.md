@@ -1,6 +1,6 @@
 # Coding Style Guideline
 
-## General Guideline
+## 🤏General Guideline
 
 ### Whitespace
 
@@ -100,24 +100,54 @@
     if (x = 1):
     ```
 
-### Functional example code
-```python
-import package1
-import package2
+### **CORRECT SCRIPT EXAMPLE (MUST READ)** 👋
 
-class Class1:
-    def __init__(self):
-        print("a")
-    
-    def function1(b: int) -> str():
-        return "b"
+```python
+import internal_package
+
+import external_package
+
+class foo1:
+
+    def bar1(var1: int, var2: str) -> int():
+
+        # some code
+
+        return 3
+
+    def bar2(var1: str, var2: str) -> None():
+        
+        # some code
+
+        return
 
 if __name__ == "__main__":
-    example1 = Class1()
-    example1.function1(3)
+
+    # some code
+
 ```
 
-## Specific Guideline
+**Key Point**
+
+1. Script Structure & Order
+
+    - Import external package, e.g `numpy`, `random`
+
+    - Import internal package (package built by developers)
+
+    - Main code
+
+    - Run section (if available)
+
+2. Function Guideline
+
+    - Parameter Type: Write down the input parameter data type
+
+    - Return Type: Write down the return data type
+
+    - Always Return: Write down `return` even if it returns nothing
+
+## 👩‍💻Specific Guideline
 
 ### Properties
 
@@ -176,14 +206,14 @@ if __name__ == "__main__":
 
 5. If a property should be read-only, define only the getter method and omit the setter method.
 
-        ```python
-        class MyClass:
-            def __init__(self):
-                self._my_property = None
+    ```python
+    class MyClass:
+        def __init__(self):
+            self._my_property = None
 
-            @property
-            def my_property(self):
-                return self._my_property
+        @property
+        def my_property(self):
+            return self._my_property
         ```
 
 ### Switch Statements
@@ -215,11 +245,11 @@ if __name__ == "__main__":
             }
     ```
 
-4. Always include a default case to handle unexpected values. This case should clearly communicate how unexpected values are handled.
+3. Always include a default case to handle unexpected values. This case should clearly communicate how unexpected values are handled.
 
-5. Include a break statement at the end of each case to prevent fall-through to the next case. If fall-through is intentional, document it with a comment.
+4. Include a break statement at the end of each case to prevent fall-through to the next case. If fall-through is intentional, document it with a comment.
 
-# Naming convention
+## ⚡Naming convention
 
 - Package: Snake_Case (Uppercase Initial)
 - Files: Snake_Case (Uppercase Initial)
