@@ -46,19 +46,18 @@ If the input string is none of the above, return ***Wrong instuction, please try
 The UI UX will have three different lines:
 
 ### 2.1:
-```bash
+```console
 Welcome! Please tell us your name:
 ```
 
 ### 2.2:
-```bash
+```console
 Which tool you want to use today? (day, week, year)
 ```
 
 ### 2.3:
-```bash
+```console
 Here is the information you want to know: 
-
 ```
 
 ## 🔍 3. How does each module look like
@@ -69,24 +68,18 @@ Here is the information you want to know:
 
 >**We will each commit and push the finished part on github and will merge them back to main branch to finish this product._**
 
-### 3.1 Calender module:   
+### 3.1 Calender module
 
 ```python
-# File calender
-calender(username, function_name):
-    username: string, function_name: string
-    return: int # return the number in the called function.
-    Purpose of this function: call the specific functions to return the value that user wants.
 
-# File functions
-number_of_days(username):
-    username: string
-    input(Year: ): int
-    input(Month: ): int
+def number_of_days(year: int, month: int) -> int():
+    """
+    return number of days in the sepecifc year month
+    """
+
+    # code 
+
     return: int
-    Purpose of this function: The function will return the total days in a specific month of the year. 
-    
-    We will build a python module leveraging _calendar.monthrange(year, month)_ to accomplish this requirement.
 
 number_of_leap_years(username):
     username: string
@@ -106,16 +99,16 @@ get_week_of_day(username):
     Purpose of this function: The function will return what week the date is with the year. E.g., 01/08/2023 is week-2 of 2023, so the function will return 2.
 ```
 
-### 3.2 Log module:
+### 3.2 Log module
 
 ```python
 # File log
-log(username, status):
-    username: string, status: string
-    Purpose of this function: After intaking the status , combine the datetime, user's name, and activities into a string, and then open the log file and write them in.
+def write_log(username: str, function_name: str) -> None():
+
+    return
 ```
 
-### 3.3 Main module:
+### 3.3 Main module
 
 ```python
 # File main
