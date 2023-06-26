@@ -64,10 +64,10 @@ Here is the information you want to know:
 ## 🔍 3. How does each module look like
 
 ---
-    
+
 >We are going to build three different modules under the same directory, and then import them all into the main function to make the code looks tidier.
 
->**_We will each commit and push the finished part on github and will merge them back to main branch to finish this product._**
+>**We will each commit and push the finished part on github and will merge them back to main branch to finish this product._**
 
 ### 3.1 Calender module:   
 
