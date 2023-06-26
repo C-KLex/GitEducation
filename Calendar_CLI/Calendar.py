@@ -1,4 +1,13 @@
 def number_of_days(year, month):
+    """
+    This function returns the total days in a specific month of the year.
+    
+    args:
+        year: integer
+        month: integer between 1 and 12
+    """
+
+    # Returns the number of days in the month depending on the year and month. 
     if (month == 2) and ((year%4 == 0) or ((year%100 == 0) and (year%400 == 0))):
         return 29
     elif (month == 2):
