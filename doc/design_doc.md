@@ -12,51 +12,54 @@
 ## 📗 1. How this CLI works
 
 ---
-There will be *four* main modules for the CLI to work, whose names are *Login,* *Register*, *Log*, and *Main*.  
+There will be *three* modules for the CLI to work, whose names are *Calender*, *Log*, and *Main*.  
 
-### 1.1 Login:
+### 1.1 Calender:
 
->- First there will be a login interface with two bars, the upper one is for users to input *username*; the lower one is for users to input *password*. Below these two bars, there should be one button for user to click in and register. At the lower right corner of the page is a ***"Finished"*** button indicating the user has finished inputting the information.
+>- First it takes a user choiced function name as an input, and then with the specific function name, call the corresponding function.
 
->- If the user enter the right username and passwords, jump to a page showing ***"Successful login! Welcome back!"***, and then open the log module with an ***"successful_login"*** input to record the user activities.
+>- If the input string is ***day***, call the ***number_of_days*** function;  
+If the input string is ***week***, call the ***get_week_of_day*** function;  
+If the input string is ***year***, call the ***number_of_leap_years*** function;  
+If the input string is none of the above, return ***Wrong instuction, please try again.***.
 
->- If the user enter the right username but wrong password, jump to a page showing ***"Wrong password, try again."***, and then open the log module with an ***"wrong_password"*** input to record the user activities. If the user clicked ***"try again."***, jump back to the login page.
+>- Inside each time function, there needs to be a input to ***Log*** function to record the activity.
 
->- If the user neither enter the right username nor the right password, jump to a page showing ***"Unsuccessful login, try again. If not registered yet, click here."***. If the user clicked ***"try again."***, jump back to the login page; if the user clicked ***"click here."***, jump to the register page.  
 
-### 1.2 Register:
+### 1.2 Log:
 
->- The register page will first show ***"Please enter below messages to register."***, the rest part is the same as the two bars and the finish button at the first page.   
+>- If this function is called with an ***"number_of_days"*** input, record the user login datetime, the username, and the activity as ***"number_of_days"***
 
->- If the account is already registered, jump to a page showing ***"Account already exists. Try again."***, and then open the log module with an ***"multiple_registration"*** input to record the user activities. If the user clicks ***"Try again."***, jump to the register page.   
+>- If this function is called with an ***"get_week_of_day"*** input, record the user login datetime, the username, and the activity as ***"get_week_of_day"***
 
->- If the account is not yet registered, jump to a page showing ***"Successfully registered! Login."***, and then open the log module with an ***"successful_registration"*** input to record the user activities. If the user clicks ***"Login."***, jump to the first login page. 
+>- If this function is called with an ***"number_of_leap_years"*** input, record the user login datetime, the username, and the activity as ***"number_of_leap_years"***
 
-### 1.3 Log:
 
->- If this function is called with an ***"successful_login"*** input, record the user login datetime, the username, and the activity as ***"successful_login"***
+### 1.3 Main:  
 
->- If this function is called with an ***"wrong_password"*** input, record the user login datetime, the username, and the activity as ***"login_with_wrong_password"***
+>- Take the user name as the first input, and then ask for the function the user wants to call. There will be three functions for user to choose: ***day***, ***week***, ***year***. After the user choose it, call the ***Calender*** function.
 
->- If this function is called with an ***"multiple_registration"*** input, record the user login datetime, the username, and the activity as ***"multiple_registration"***
-
->- If this function is called with an ***"successful_registration"*** input, record the user login datetime, the username, and the activity as ***"successful_registration"***  
-
-### 1.4 Main:  
-
->- Take the action user wants to do as the first input, and then ask for the username and password.
-
->- If the user wants to login, call the ***Login*** function.
-
->- If the user wants to register, call the ***Register*** function.
 
 ## 🖼️ 2. UI UX
 
 ---
-### The UI UX looks like
+The UI UX will have three different lines:
 
-![UI UX Picture](UI_UX_picture.jpg)
+### 2.1:
+```bash
+Welcome! Please tell us your name:
+```
 
+### 2.2:
+```bash
+Which tool you want to use today? (day, week, year)
+```
+
+### 2.3:
+```bash
+Here is the information you want to know: 
+
+```
 
 ## 🔍 3. How does each module look like
 
@@ -66,75 +69,59 @@ There will be *four* main modules for the CLI to work, whose names are *Login,* 
 
 >**_We will each commit and push the finished part on github and will merge them back to main branch to finish this product._**
 
-### 3.1 Login module:   
+### 3.1 Calender module:   
 
 ```python
-# File1
-login(username, password):
-    '''purpose of this function: Check if the login information is right, and link the login action to Log module.
-    '''
-    username = str, password = str
-    return = str # return if the login is successful.
+# File calender
+calender(username, function_name):
+    username: string, function_name: string
+    return: int # return the number in the called function.
+    Purpose of this function: call the specific functions to return the value that user wants.
 
-# File2
-number_of_days(year, month):
-    '''The function will return the total days in a specific month of the year. 
+# File functions
+number_of_days(username):
+    username: string
+    input(Year: ): int
+    input(Month: ): int
+    return: int
+    Purpose of this function: The function will return the total days in a specific month of the year. 
     
     We will build a python module leveraging _calendar.monthrange(year, month)_ to accomplish this requirement.
-    '''
-    year = int, month = int
-    return = int
 
-number_of_leap_years(year1, year2):
-    '''The function will return the number of leap years between year1, and year2, including year1 and year2 if there are also leap years.
-    '''
-    year1 = int, year2 = int
+number_of_leap_years(username):
+    username: string
+    input(Year1: ): int
+    input(Year2: ): int
     # We will do mathematical calculation like this:
     if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
-    return = int
+    return: int
+    Purpose of this function: The function will return the number of leap years between year1, and year2, including year1 and year2 if there are also leap years.
 
-get_week_of_day(year, month, day):
-    '''The function will return what week the date is with the year. E.g., 01/08/2023 is week-2 of 2023, so the function will return 2.
-    '''
-    year = int, month = int, day = int
-    date = datetime.strptime(date_string, "%d/%m/%Y")
-    week_number = date.strftime("%W")
-    year = date.strftime("%Y")
-    return = int
+get_week_of_day(username):
+    username: string
+    input(Year: ): int
+    input(Month: ): int
+    input(Day: ): int
+    return: int
+    Purpose of this function: The function will return what week the date is with the year. E.g., 01/08/2023 is week-2 of 2023, so the function will return 2.
 ```
 
-### 3.2 Register module:  
+### 3.2 Log module:
 
 ```python
-register(username, password):
-    '''purpose of this function: Check if the register information is already there, and link the register action to Log module.
-    '''
-    username = str, password = str
-    return = str # return if the register is successful.
+# File log
+log(username, status):
+    username: string, status: string
+    Purpose of this function: After intaking the status , combine the datetime, user's name, and activities into a string, and then open the log file and write them in.
 ```
 
-### 3.3 Log module:
+### 3.3 Main module:
 
 ```python
-log(username, password, status):
-    '''purpose of this function: After intaking the status from either login function or register function, combine the datetime, user's name, and activities into a string, and then open the log file and write them in.
-    '''
-    username = str, password = str, status = str
-    return = str # return the result for user.
-```
-
-### 3.4 Main module:
-
-```python
+# File main
 main():
-    '''purpose of this function: connect the other three modules and make this project work.
-    '''
-    input("Which action you wanna take?(Login or Register)")
-
-    if Login:
-        login()
-    elif Register:
-        register()
-    else:
-        return "Please enter again."
+    username = input(Welcome! Please tell us your name): string
+    function_name = input("Which tool you want to use today? (day, week, year)"): string
+    return calender(username, function_name): int
+    Purpose of this function: connect the other three modules and make this project work.
 ```
