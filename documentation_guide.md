@@ -1,6 +1,6 @@
 # **Documentation Guideline**
 
-## 1️⃣ **Code comment(.py)**
+## **Code comment(.py)**
 
 When to use different types of comments in Python:
 
@@ -90,60 +90,3 @@ def funcion2(num1, num2):
         return False
 
 ```
-
-----
-
-## 2️⃣ **Document(.md)**
-
-- ### **Function description**
-
-  1. Briefly describe what the function does.
-  2. List the parameters it accepts, including their names, types, and any constraints or requirements.
-  3. Specify the return type of the function.
-  - *template*:
-
-    `calculate_average(numbers: List[float]) -> float`
-
-    Calculates the average of a list of numbers.
-
-    - **Parameters:**
-      - `numbers` (List[float]): A list of floating-point numbers.
-
-    - **Returns:**
-      - `float`: The average value of the numbers.
-    ----
-
-- ### **Module description**
-  
-  1. Provide an overview of the module's purpose and functionality.
-  2. Explain what the module is used for and how it can be helpful to users.
-  3. Highlight the key features, functions, or classes provided by the module.
-
-  - *template:*
-  
-      The `utils` module provides utility functions and classes for common tasks.
-
-      **Functions:**
-      - `validate_email(email: str) -> bool`: Validates if an email address is valid.
-      - `generate_random_number() -> int`: Generates a random integer.
-
-      **Classes:**
-      - `FileHandler`: A class for handling file operations such as reading, writing, and file manipulation.
-
-        ----
-
-- ### **Package description**
-
-    1. Describe the purpose and scope of the package. 
-    2. Explain what the package offers, its main features, and how it can be beneficial to users. 
-    3. Highlight the key modules or scripts included in the package.
-
-    - *template:*
-  
-      The `data_processing` package provides a set of modules and scripts for data processing and analysis.
-
-        **Modules:**
-      - `preprocessing`: Contains functions for data preprocessing tasks such as cleaning, normalization, and feature engineering.
-      - `analysis`: Implements various statistical and analytical methods for data analysis and visualization.
-      - `modeling`: Includes classes and functions for building and evaluating predictive models.
-  
