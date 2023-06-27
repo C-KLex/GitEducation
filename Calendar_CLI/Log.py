@@ -17,4 +17,7 @@ def write_log(username: str, function_name: str) -> None():
     newrow = pd.Series([time, username, function_name], index = df.columns)
     df = pd.concat([newrow, df]).reset_index(drop = True)
 
+    # export dataframe to csv
+    df.to_csv('log.csv')
+
     return 
