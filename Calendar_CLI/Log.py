@@ -1,5 +1,3 @@
-# File log
-
 import datetime
 import pandas as pd
 
