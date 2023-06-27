@@ -1,8 +1,8 @@
 from Calendar import number_of_days, number_of_leap_years, get_week_of_day
-from Log import log
+from Log import write_log
 
 
-def main() -> int():
+def main():
     """
     Connect the other two modules and make this project work.
     """
@@ -12,18 +12,18 @@ def main() -> int():
     if function_name == "day":
         year = input("Year: ")
         month = input("Month: ")
-        number_of_days(year, month)
-        log(username, function_name)
+        print(number_of_days(year, month))
+        write_log(username, function_name)
     elif function_name == "week":
         year = input("Year: ")
         month = input("Month: ")
         day = input("Day: ")
-        number_of_days(year, month, day)
-        log(username, function_name)
+        print(get_week_of_day(year, month, day))
+        write_log(username, function_name)
     elif function_name == "year":
         year1 = input("Year1: ")
         year2 = input("Year2: ")
-        number_of_leap_years(year1, year2)
-        log(username, function_name)
+        print(number_of_leap_years(year1, year2))
+        write_log(username, function_name)
     else:
         return "Wrong instuction, please try again."
