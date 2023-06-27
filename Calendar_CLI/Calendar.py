@@ -6,7 +6,7 @@ def get_week_of_day(year: int, month: int, day: int) -> int:
     args:
         year: postive integer(AD only)
         month: from 1 to 12
-        day: from 1 to 31(except for Feb, Apr, June, Sep, Nov)
+        days: depends on month and leap year, from 1 to {28,29,30,31}
     """
     try:
         date = datetime.date(year, month, day)
