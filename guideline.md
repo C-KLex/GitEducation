@@ -115,7 +115,7 @@ class foo1:
 
         return 3
 
-    def bar2(var1: str, var2: str) -> None():
+    def bar2(var1: str, var2: str):
         
         # some code
 
@@ -143,7 +143,7 @@ Key Point
 
     - Parameter Type: Write down the input parameter data type
 
-    - Return Type: Write down the return data type
+    - Return Type: Write down the return data type, except return nothing.
 
     - Always Return: Write down `return` even if it returns nothing
 
