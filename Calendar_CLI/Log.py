@@ -5,8 +5,11 @@ def write_log(username: str, function_name: str) -> None():
     """
     Track the datetime, user's name, and activities.
     All the logs should be written in inverse chronological order.
-    """
 
+    Parameters:
+        username(str): name of user
+        function_name(str): name of user's activity 
+    """
     # parse existing file
     df = pd.read_csv('log.csv', header = 'infer')
 
