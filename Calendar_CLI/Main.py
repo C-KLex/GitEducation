@@ -1,5 +1,14 @@
-from Calendar import number_of_days, number_of_leap_years, get_week_of_day
-from Log import write_log
+"""
+GitEducation/Calendar_CLI/Main.py
+
+Main run file for the CLI.
+
+Author: Jordan, Kyle
+Date: 20230626
+"""
+
+from Calendar_CLI.Calendar import number_of_days, number_of_leap_years, get_week_of_day
+from Calendar_CLI.Log import write_log
 
 
 def main():
