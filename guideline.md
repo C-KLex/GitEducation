@@ -253,8 +253,8 @@ Key Point
 
 # **🤯Naming Convention**
 
-- Package: Snake_Case (Uppercase Initial)
-- Files: Snake_Case (Uppercase Initial)
+- Package: snake_case
+- Files: snake_case
 - Class: Snake_Case (Uppercase Initial)
 - Function: snake_case
 - Variables: snake_case
