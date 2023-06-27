@@ -1,4 +1,13 @@
-<<<<<<< HEAD
+"""
+GitEducation/Calendar_CLI/Calendar.py
+
+The essential module containing the calendar related function. 
+
+Author: Kyle, Hsuan, Viet, Jordan
+Date: 20230626
+"""
+import datetime
+
 def number_of_days(year, month):
     """
     This function returns the total days in a specific month of the year.
@@ -26,17 +35,6 @@ def number_of_days(year, month):
         return 31
     else:
         return 30
-=======
-"""
-GitEducation/Calendar_CLI/Calendar.py
-
-The essential module containing the calendar related function. 
-
-Author: Kyle, Hsuan, Viet, Jordan
-Date: 20230626
-"""
-import datetime
-
 
 def number_of_leap_years(year1: int, year2: int) -> int():
     """
@@ -75,4 +73,3 @@ def get_week_of_day(year: int, month: int, day: int) -> int():
 
     except ValueError:
         return "Error: Invalid Date "
->>>>>>> origin
