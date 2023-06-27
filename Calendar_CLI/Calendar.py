@@ -27,7 +27,7 @@ def number_of_leap_years(year1: int, year2: int) -> int():
     return count
 
 
-def get_week_of_day(year: int, month: int, day: int) -> int:
+def get_week_of_day(year: int, month: int, day: int) -> int():
     """
     Return what week the date is with the year. Every 1/1 to 1/7 of the year will be considered as week 1.
     args:
