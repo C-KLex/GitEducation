@@ -3,7 +3,6 @@
 import datetime
 import pandas as pd
 
-
 def write_log(username: str, function_name: str) -> None():
     """
     Track the datetime, user's name, and activities.
@@ -11,11 +10,11 @@ def write_log(username: str, function_name: str) -> None():
     """
 
     # parse existing file
-    df = pd.read_csv('log.csv')
+    df = pd.read_csv('log.csv', header = 'infer')
 
     # add new row on the top of dataframe
     time = datetime.datetime.now()
     newrow = pd.Series([time, username, function_name], index = df.columns)
-    df = pd.concat([newrow, df]).reset_index(drop=True)
+    df = pd.concat([newrow, df]).reset_index(drop = True)
 
     return 
