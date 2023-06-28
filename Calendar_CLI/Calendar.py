@@ -31,7 +31,7 @@ def number_of_days(year, month):
                 return 28
         else: 
             raise ValueError("0 is not a valid year. Please enter either a positive or negative number, corresponding to BC or AD.")
-    elif (month == 1 or month == 3 or month == 5 or month == 7 or month == 9 or month == 10):
+    elif (month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12):
         return 31
     else:
         return 30
