@@ -28,10 +28,13 @@ def write_log(username: str, function_name: str):
     # parse existing file
     df = pd.read_csv('Calendar_CLI/Log.csv', header = 'infer')
 
-    # add new row on the top of dataframe
+    # create new row
     time = datetime.datetime.now()
-    newrow = pd.Series([time, username, function_name], index = df.columns)
-    df = pd.concat([newrow, df]).reset_index(drop = True)
+    df_new = pd.DataFrame([time, username, function_name]).T
+    df_new.columns = df.columns
+
+    # add new row to the data frame
+    df = pd.concat([df_new, df], axis=0, ignore_index=True)
 
     # export dataframe to csv
     df.to_csv('Calendar_CLI/Log.csv')
