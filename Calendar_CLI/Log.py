@@ -10,7 +10,7 @@ Date: 20230626
 import datetime
 import pandas as pd
 
-def write_log(username: str, function_name: str) -> None():
+def write_log(username: str, function_name: str):
     """
     Track the datetime, user's name, and activities.
     All the logs should be written in inverse chronological order.
