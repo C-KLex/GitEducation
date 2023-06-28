@@ -20,7 +20,7 @@ def write_log(username: str, function_name: str):
         function_name(str): name of user's activity 
     """
     # parse existing file
-    df = pd.read_csv('log.csv', header = 'infer')
+    df = pd.read_csv('Calender_CLI/Log.csv', header = 'infer')
 
     # add new row on the top of dataframe
     time = datetime.datetime.now()
@@ -28,6 +28,6 @@ def write_log(username: str, function_name: str):
     df = pd.concat([newrow, df]).reset_index(drop = True)
 
     # export dataframe to csv
-    df.to_csv('log.csv')
+    df.to_csv('Calender_CLI/Log.csv')
 
     return 
