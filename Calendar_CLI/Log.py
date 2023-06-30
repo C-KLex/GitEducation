@@ -10,7 +10,7 @@ Date: 20230626
 import datetime
 import pandas as pd
 
-def write_log(username: str, function_name: str) -> None():
+def write_log(username: str, function_name: str):
     """
     Track the datetime, user's name, and activities.
     All the logs should be written in inverse chronological order.
@@ -20,14 +20,17 @@ def write_log(username: str, function_name: str) -> None():
         function_name(str): name of user's activity 
     """
     # parse existing file
-    df = pd.read_csv('log.csv', header = 'infer')
+    df = pd.read_csv('Calendar_CLI/Log.csv', header = 'infer')
 
-    # add new row on the top of dataframe
+    # create new row
     time = datetime.datetime.now()
-    newrow = pd.Series([time, username, function_name], index = df.columns)
-    df = pd.concat([newrow, df]).reset_index(drop = True)
+    df_new = pd.DataFrame([time, username, function_name]).T
+    df_new.columns = df.columns
+
+    # add new row to the data frame
+    df = pd.concat([df_new, df], axis=0, ignore_index=True)
 
     # export dataframe to csv
-    df.to_csv('log.csv')
+    df.to_csv('Calendar_CLI/Log.csv', index=None)
 
     return 
