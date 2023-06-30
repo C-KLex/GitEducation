@@ -31,6 +31,6 @@ def write_log(username: str, function_name: str):
     df = pd.concat([df_new, df], axis=0, ignore_index=True)
 
     # export dataframe to csv
-    df.to_csv('Calendar_CLI/Log.csv')
+    df.to_csv('Calendar_CLI/Log.csv', index=None)
 
     return 
