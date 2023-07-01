@@ -19,19 +19,19 @@ def main():
     function_name = input("Which tool you want to use today? (day, week, year)")
 
     if function_name == "day":
-        year = input("Year: ")
-        month = input("Month: ")
+        year = int(input("Year: "))
+        month = int(input("Month: "))
         print(number_of_days(year, month))
         write_log(username, function_name)
     elif function_name == "week":
-        year = input("Year: ")
-        month = input("Month: ")
-        day = input("Day: ")
+        year = int(input("Year: "))
+        month = int(input("Month: "))
+        day = int(input("Day: "))
         print(get_week_of_day(year, month, day))
         write_log(username, function_name)
     elif function_name == "year":
-        year1 = input("Year1: ")
-        year2 = input("Year2: ")
+        year1 = int(input("Year1: "))
+        year2 = int(input("Year2: "))
         print(number_of_leap_years(year1, year2))
         write_log(username, function_name)
     else:
